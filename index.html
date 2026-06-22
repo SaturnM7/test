@@ -1,47 +1,29 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interaktives Menü</title>
-    <link rel="stylesheet" href="style.css">
+    <title>JS Mastery Sandbox</title>
+    <style>
+        body { font-family: sans-serif; background: #121212; color: white; padding: 20px; }
+        .module { border: 1px solid #444; padding: 15px; margin-bottom: 10px; border-radius: 8px; }
+        #output { background: #000; color: #0f0; padding: 10px; min-height: 100px; white-space: pre-wrap; }
+        button { cursor: pointer; padding: 8px; background: #3498db; border: none; color: white; border-radius: 4px; }
+    </style>
 </head>
 <body>
+    <h1>JavaScript Comprehensive Study Tool</h1>
+    
+    <div class="module">
+        <h3>Console Output</h3>
+        <div id="output">Click a module to see JS in action...</div>
+        <button onclick="clearLog()">Clear Log</button>
+    </div>
 
-    <div class="container">
-        <h1>Control Panel</h1>
-
-        <!-- Schalter für Menüs -->
-        <div class="control-group">
-            <p>Menüs einblenden:</p>
-            <label class="switch">
-                <input type="checkbox" id="toggleMenu">
-                <span class="slider-round"></span>
-            </label>
-        </div>
-
-        <!-- Das versteckte Menü -->
-        <div id="extraMenu" class="hidden-menu">
-            <h3>Extra Einstellungen</h3>
-            
-            <!-- Schieberegler -->
-            <div class="control-group">
-                <label for="sizeSlider">Größe der Box:</label>
-                <input type="range" id="sizeSlider" min="50" max="200" value="100">
-            </div>
-
-            <!-- Buttons für Animationen -->
-            <div class="button-group">
-                <button id="btnBounce">Bounce!</button>
-                <button id="btnSpin">Spin!</button>
-                <button id="btnPulse">Pulse!</button>
-            </div>
-        </div>
-
-        <!-- Die Box, die animiert wird -->
-        <div class="display-area">
-            <div id="targetBox" class="box"></div>
-        </div>
+    <div class="module">
+        <button id="btn-basics">Run Basics & Types</button>
+        <button id="btn-arrays">Run Array/Object Logic</button>
+        <button id="btn-async">Run Async/API Call</button>
+        <button id="btn-oop">Run OOP/Classes</button>
     </div>
 
     <script src="script.js"></script>
