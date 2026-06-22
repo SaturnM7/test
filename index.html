@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktives Menü</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Control Panel</h1>
+
+        <!-- Schalter für Menüs -->
+        <div class="control-group">
+            <p>Menüs einblenden:</p>
+            <label class="switch">
+                <input type="checkbox" id="toggleMenu">
+                <span class="slider-round"></span>
+            </label>
+        </div>
+
+        <!-- Das versteckte Menü -->
+        <div id="extraMenu" class="hidden-menu">
+            <h3>Extra Einstellungen</h3>
+            
+            <!-- Schieberegler -->
+            <div class="control-group">
+                <label for="sizeSlider">Größe der Box:</label>
+                <input type="range" id="sizeSlider" min="50" max="200" value="100">
+            </div>
+
+            <!-- Buttons für Animationen -->
+            <div class="button-group">
+                <button id="btnBounce">Bounce!</button>
+                <button id="btnSpin">Spin!</button>
+                <button id="btnPulse">Pulse!</button>
+            </div>
+        </div>
+
+        <!-- Die Box, die animiert wird -->
+        <div class="display-area">
+            <div id="targetBox" class="box"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
